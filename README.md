@@ -1,0 +1,13 @@
+install.packages("devtools", dependencies = TRUE)
+devtools::install_github("boboss2022/plantSpecies/SpeciesMatcher")
+install.packages("remotes")
+remotes::install_github("boboss2022/plantSpecies")
+library(processx)
+library(dplyr)
+library(openxlsx)
+library(SpeciesMatcher)
+data <- read.xlsx("植物分类.xlsx")
+matched_species <- match_species(data)
+print(matched_species)
+write.xlsx(matched_data,"matched_species.xlsx")
+Note: There is a column of species name data in the data. The column name here must be set to "物种”. The specific data format can be viewed by downloading “植物分类.xlsx”.
