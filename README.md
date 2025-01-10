@@ -1,5 +1,5 @@
 install.packages("devtools", dependencies = TRUE)
-devtools::install_github("boboss2022/plantSpecies/SpeciesMatcher")
+devtools::install_github("boboss2022/plantSpecies")
 install.packages("remotes")
 remotes::install_github("boboss2022/plantSpecies")
 library(processx)
